@@ -1,21 +1,11 @@
 var list = [],
-    colors = [
-        '#F44336',
-        '#03A9F4',
-        '#E91E63',
-        '#9C27B0',
-        '#3F51B5',
-        '#2196F3',
-        '#009688',
-        '#FF5722',
-        '#607D8B'
-    ];
+    colors = [ '#F44336', '#03A9F4', '#E91E63', '#9C27B0', '#3F51B5', '#2196F3', '#009688', '#FF5722', '#607D8B', '#4CAF50', '#FFC107' ];
 
 function type( str ) {
     str = str.split( '' );
     var letter = str.shift();
     document.getElementById( 'text' ).innerHTML += letter;
-    var time = Math.random() * 200 + 100;
+    var time = Math.random() * 300 + 50;
     setTimeout( function() {
         if ( str.length ) {
             type( str.join( '' ) );
