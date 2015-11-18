@@ -6,8 +6,8 @@
     :copyright: (c) 2015 by basilboli
 """
 
-from flask import Flask, request, redirect, render_template, url_for, flash, abort, session, g, flash,_app_ctx_stack
-import json,redis
+from flask import Flask
+import json, redis
 import settings
 
 redis = redis.StrictRedis(host="localhost", port=6379, db=0)
