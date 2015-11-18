@@ -1,4 +1,15 @@
-var list = [];
+var list = [],
+    colors = [
+        '#F44336',
+        '#03A9F4',
+        '#E91E63',
+        '#9C27B0',
+        '#3F51B5',
+        '#2196F3',
+        '#009688',
+        '#FF5722',
+        '#607D8B'
+    ];
 
 function type( str ) {
     str = str.split( '' );
@@ -10,14 +21,11 @@ function type( str ) {
             type( str.join( '' ) );
         } else {
             setTimeout( function() {
-                if ( list.length ) {
-                    document.getElementById( 'text' ).innerHTML = "";
-                    type( list.shift() );
-                } else {
-                    document.getElementById( 'text' ).innerHTML = "";
-                    getList();
-                }
-            }, 1500 );
+                document.getElementById( 'text' ).innerHTML = "";
+                document.body.style.background = colors[ Math.floor( Math.random() * colors.length ) ];
+                if ( list.length ) type( list.shift() );
+                else getList();
+            }, 1000 );
         }
 
     }, time );
