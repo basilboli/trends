@@ -1,3 +1,3 @@
-channel = "rawdata.trends"
+channel = "YOU_CHANNEL"
 stream_host = "address of the host streaming keywords"
-exclude_regex = "3suisses|suisse|3\ssuisses|suises|trois\ssuisse|not\sprovided|http:"
+exclude_regex = "YOUR_REGEX"
