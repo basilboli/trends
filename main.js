@@ -22,7 +22,7 @@ function type( str ) {
 }
 
 function getList() {
-    $.get( 'http://stats-rawdata-test.55labs.com/trends' ).done( function( resp ) {
+    $.get( '/trends' ).done( function( resp ) {
         list = JSON.parse( resp );
         type( list.shift() );
     } );
